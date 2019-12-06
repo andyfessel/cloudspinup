@@ -1,0 +1,51 @@
+Last login: Thu Dec  5 23:12:36 2019 from 173.194.90.33
+[andyfessel@repo-mirror4 ~]$ cd /etc/nginx
+[andyfessel@repo-mirror4 nginx]$ cp nginx nginx.conf.bak
+cp: cannot stat ‘nginx’: No such file or directory
+[andyfessel@repo-mirror4 nginx]$ systemctl restart nginx
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to manage system services or units.
+Authenticating as: root
+Password: 
+polkit-agent-helper-1: pam_authenticate failed: Authentication failure
+==== AUTHENTICATION FAILED ===
+Failed to restart nginx.service: Access denied
+See system logs and 'systemctl status nginx.service' for details.
+[andyfessel@repo-mirror4 nginx]$ nginx status
+nginx: invalid option: "status"
+[andyfessel@repo-mirror4 nginx]$ systemctl restart nginx
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Authentication is required to manage system services or units.
+Authenticating as: root
+Password: 
+polkit-agent-helper-1: pam_authenticate failed: Authentication failure
+==== AUTHENTICATION FAILED ===
+Failed to restart nginx.service: Access denied
+See system logs and 'systemctl status nginx.service' for details.
+[andyfessel@repo-mirror4 nginx]$ 0
+-bash: 0: command not found
+[andyfessel@repo-mirror4 nginx]$ restore -R /var/www/html
+-bash: restore: command not found
+[andyfessel@repo-mirror4 nginx]$ sudo s
+sudo: s: command not found
+[andyfessel@repo-mirror4 nginx]$ sudo s
+sudo: s: command not found
+[andyfessel@repo-mirror4 nginx]$ sudo su
+[root@repo-mirror4 nginx]# systemctl restart nginx
+[root@repo-mirror4 nginx]# restorecon -R /var/www/html
+[root@repo-mirror4 nginx]# yum repolist
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: us.mirror.nsec.pt
+ * epel: mirror.uic.edu
+ * extras: us.mirror.nsec.pt
+ * updates: us.mirror.nsec.pt
+repo id                                                                                     repo name                                                                                                            status
+base/7/x86_64                                                                               CentOS-7 - Base                                                                                                      10,097
+epel/x86_64                                                                                 Extra Packages for Enterprise Linux 7 - x86_64                                                                       13,485
+extras/7/x86_64                                                                             CentOS-7 - Extras                                                                                                       305
+google-cloud-sdk                                                                            Google Cloud SDK                                                                                                      1,032
+google-compute-engine                                                                       Google Compute Engine                                                                                                    11
+updates/7/x86_64                                                                            CentOS-7 - Updates                                                                                                      953
+repolist: 25,883
+[root@repo-mirror4 nginx]# 
